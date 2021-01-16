@@ -47,16 +47,26 @@ export default {
     methods: {
 
         initialize() {
-            this.ord.attributions.forEach(attribution => {
-                this.attributions[attribution.horraire] = {
-                    id: attribution.id,
-                    nom: attribution.client.nom,
-                    prenom: attribution.client.prenom
-                };
-            })
+            // this.ord.attributions.forEach(attribution => {
+            //     this.attributions[attribution.horraire] = {
+            //         id: attribution.id,
+            //         nom: attribution.client.nom,
+            //         prenom: attribution.client.prenom
+            //     };
+            // })
+
+            for (let i = 0; i < this.ord.attributions.length; i++) {
+                this.attributions[this.ord.attributions[i].horraire] =
+                {
+                    'id': this.ord.attributions[i].id,
+                    'nom': this.ord.attributions[i].client.nom,
+                    'prenom': this.ord.attributions[i].client.prenom
+                }
+            }
 
             this.displayHorraire()
         },
+
 
         displayHorraire() {
             this.horraires = []
@@ -84,7 +94,7 @@ export default {
 
             console.log(this.attributions)
 
-            this.displayHorraire() 
+            this.displayHorraire()
 
 
         }

@@ -110,8 +110,10 @@ class OrdinateurController extends Controller
      * @param  \App\Models\Ordinateur  $ordinateur
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ordinateur $ordinateur)
+    public function destroy($id)
     {
-        //
+        $r  = Ordinateur::find($id);
+        Ordinateur::destroy($id);
+        return new RessourceOrdinateur($r);
     }
 }

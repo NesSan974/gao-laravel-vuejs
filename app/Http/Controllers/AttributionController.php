@@ -100,8 +100,10 @@ class AttributionController extends Controller
      * @param  \App\Models\Attribution  $attribution
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Attribution $attribution)
+    public function destroy($id)
     {
-        //
+        $r  = Attribution::find($id);
+        Attribution::destroy($id);
+        return new RessourceAttribution($r);
     }
 }

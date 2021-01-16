@@ -21,15 +21,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
-
 Route::post('/ordinateur/show',[OrdinateurController::class, 'index']);
 Route::post('/ordinateur/add',[OrdinateurController::class, 'store']);
+Route::delete('/ordinateur/delete/{id}',[OrdinateurController::class, 'destroy']);
 
 Route::post('/clients/search',[ClientController::class, 'search']);
 Route::get('/clients/show',[ClientController::class, 'index']);
 
-
 Route::get('/attribution/show',[AttributionController::class, 'index']);
 Route::post('/attribution/add',[AttributionController::class, 'store']);
-
+Route::delete('/attribution/delete/{id}',[AttributionController::class, 'destroy']);

@@ -15,7 +15,7 @@
               readonly
               v-bind="attrs"
               v-on="on"
-              
+
             ></v-text-field>
           </template>
           <v-date-picker v-model="date" @change="dateUpdate()" scrollable>
@@ -32,16 +32,18 @@
     <modalAddOrd @update="updateOrd" />
 
     <div class="row justify-content-center">
-      <v-row>
-        <v-col v-for="(ordinateur, key) in ordinateurs" :key="key">
+      <v-row >
+        <v-col
+        cols="12"
+        sm="4"
+        
+        v-for="(ordinateur, key) in ordinateurs" :key="key">
           <ordinateur v-bind:ord="ordinateur" :date="date" :clients="clients" />
-          
+
         </v-col>
       </v-row>
     </div>
   </div>
 </template>
-
-
 
 <script src="../home.js"></script>

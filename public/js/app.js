@@ -2179,15 +2179,21 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     initialize: function initialize() {
-      var _this = this;
-
-      this.ord.attributions.forEach(function (attribution) {
-        _this.attributions[attribution.horraire] = {
-          id: attribution.id,
-          nom: attribution.client.nom,
-          prenom: attribution.client.prenom
+      // this.ord.attributions.forEach(attribution => {
+      //     this.attributions[attribution.horraire] = {
+      //         id: attribution.id,
+      //         nom: attribution.client.nom,
+      //         prenom: attribution.client.prenom
+      //     };
+      // })
+      for (var i = 0; i < this.ord.attributions.length; i++) {
+        this.attributions[this.ord.attributions[i].horraire] = {
+          'id': this.ord.attributions[i].id,
+          'nom': this.ord.attributions[i].client.nom,
+          'prenom': this.ord.attributions[i].client.prenom
         };
-      });
+      }
+
       this.displayHorraire();
     },
     displayHorraire: function displayHorraire() {
@@ -38430,7 +38436,7 @@ var render = function() {
         { key: key },
         [
           _c("v-col", { staticClass: "cols-md-1" }, [
-            _vm._v("\n      " + _vm._s(key + 8) + "  \n      ")
+            _vm._v("\n      " + _vm._s(key + 8) + "h\n      ")
           ]),
           _vm._v(" "),
           horraire.id
@@ -38621,7 +38627,7 @@ var render = function() {
             _vm._l(_vm.ordinateurs, function(ordinateur, key) {
               return _c(
                 "v-col",
-                { key: key },
+                { key: key, attrs: { cols: "12", sm: "4" } },
                 [
                   _c("ordinateur", {
                     attrs: {
@@ -98877,8 +98883,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/quentin/Projet/simplon/gao-laravel-vuejs/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/quentin/Projet/simplon/gao-laravel-vuejs/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/quentin/Projet/simplon/gao/gao-laravel-vuejs/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/quentin/Projet/simplon/gao/gao-laravel-vuejs/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

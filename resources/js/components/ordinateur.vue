@@ -1,15 +1,17 @@
 <template>
     <div class="col-md-10">
 
-    	<v-card>
+    	<v-card class="">
 
             <v-card-title>
-                {{ ord.nom }}
+                <v-row>{{ ord.nom }}</v-row>
+                <v-btn color="red white--text">-</v-btn>
+                
             </v-card-title>
-
+ 
             <v-card-text>
 
-            	<compteur @updateAtt="updateAtt" :horraires="horraires" :date="date" :ord="ord" :clients="clients"/>
+            	<compteur @updateAtt="updateAtt" @delatt="delAtt" :horraires="horraires" :date="date" :ord="ord" :clients="clients"/>
 				
                 
             </v-card-text>

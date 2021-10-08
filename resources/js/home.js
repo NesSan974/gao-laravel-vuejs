@@ -54,19 +54,20 @@ export default {
 
                 for (var i = response.data.data.length - 1; i >= 0; i--) {
                     this.ordinateurs.push( response.data.data[i] )
-                    //console.log(response.data.data[i])
+                    // console.log(response.data.data[i])
                 }
                 
               } )
               
+            
     	},
 
-        updateOrd (nom){
-            this.ordinateurs.push({nom: nom})
-            //console.log(nom)
+        updateOrd (ord){
+            this.ordinateurs.push(ord)
+            // this.dateUpdate
         },
 
 
 
-    }
+    } 
 }

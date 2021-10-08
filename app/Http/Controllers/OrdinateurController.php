@@ -67,7 +67,7 @@ class OrdinateurController extends Controller
 
         $addOrd->save();
 
-        return $val;
+        return new RessourceOrdinateur($addOrd);  
     }
 
     /**

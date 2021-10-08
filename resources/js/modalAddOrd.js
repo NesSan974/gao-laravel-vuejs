@@ -30,8 +30,10 @@ export default {
                 newOrd: this.ordiNom
             })
             .then( ({data}) => {
-                this.$emit('update', data.newOrd)
+                this.$emit('update', data.data)
+
             })
+
 
         }
     }

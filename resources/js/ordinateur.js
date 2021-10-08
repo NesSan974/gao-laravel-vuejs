@@ -80,8 +80,7 @@ export default {
             }
         },
 
-        updateAtt(att) {
-            console.log(this.attributions)
+        updateAtt(att) { //ajout attribution + update
 
             this.ord.attributions.push(att)
 
@@ -92,13 +91,27 @@ export default {
                 prenom: att.client.prenom
             };
 
-            console.log(this.attributions)
+            this.displayHorraire()
+
+        },
+
+        delAtt(idAtt) { //del attribution + update
+
+            var refreshDeleteData = []
+
+            for (let i = 8; i <= 18; i++) {
+                if (this.attributions[i] != undefined && this.attributions[i].id != idAtt) {
+
+                    refreshDeleteData[i] = this.attributions[i]
+
+                }
+            }
+
+            this.attributions = refreshDeleteData
 
             this.displayHorraire()
 
-
         }
-
 
     }
 }

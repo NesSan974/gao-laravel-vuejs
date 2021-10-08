@@ -1,10 +1,13 @@
 import modalAddAttribution from './components/modalAddAttribution.vue';
+import modalDelAttribution from './components/modalDelAttribution.vue';
 
 
 export default {
 
     components:{
-        modalAddAttribution
+        modalAddAttribution,
+        modalDelAttribution
+
     },
 
     props:{
@@ -49,6 +52,11 @@ export default {
             //this.ordinateurs.push({nom: nom})
             this.$emit('updateAtt', att)
             
+        },
+
+        updateAttribution (idAtt){
+            this.$emit('delatt', idAtt)
+
         }
     }
 }

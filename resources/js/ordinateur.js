@@ -1,6 +1,7 @@
 
 import Axios from 'axios'
 import compteur from './components/compteur.vue';
+import modalDelOrdinateur from './components/modalDelOrdinateur.vue';
 
 
 
@@ -8,7 +9,9 @@ import compteur from './components/compteur.vue';
 export default {
 
     components: {
-        compteur
+        compteur,
+        modalDelOrdinateur
+
     },
 
     props: {

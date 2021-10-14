@@ -20,7 +20,7 @@
           :clients="clients"
           :date="date"
           @add="addAttribution"
-        />
+        /> 
       </v-col>
     </v-row>
   </div>

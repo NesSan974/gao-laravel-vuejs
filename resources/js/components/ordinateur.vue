@@ -5,7 +5,8 @@
 
             <v-card-title>
                 <v-row>{{ ord.nom }}</v-row>
-                <v-btn color="red white--text">-</v-btn>
+                
+                <modalDelOrdinateur />
                 
             </v-card-title>
  

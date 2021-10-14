@@ -26,6 +26,7 @@ Route::post('/ordinateur/add',[OrdinateurController::class, 'store']);
 Route::delete('/ordinateur/delete/{id}',[OrdinateurController::class, 'destroy']);
 
 Route::post('/clients/search',[ClientController::class, 'search']);
+Route::post('/client/add',[ClientController::class, 'store']);
 Route::get('/clients/show',[ClientController::class, 'index']);
 
 Route::get('/attribution/show',[AttributionController::class, 'index']);

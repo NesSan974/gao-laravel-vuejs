@@ -31,7 +31,7 @@ class OrdinateurController extends Controller
         $ord = Ordinateur::with(['attributions' => function ($req) use ($val) {
             $req->where('date', '=', $val['date'])
                 ->with('client');
-        }])->get();
+        }])->orderBy('id', 'DESC')->get();
 
 
 

@@ -17,10 +17,12 @@ class clientsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('clients')->insert([
-            'prenom' => Str::random(10),
-            'nom' => Str::random(12)
-        ]);
 
+        for ($i = 0; $i < 4; $i++) {
+            DB::table('clients')->insert([
+                'prenom' => Str::random(10),
+                'nom' => Str::random(12)
+            ]);
+        }
     }
 }

@@ -57,7 +57,19 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $val = $request->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
+        ]);
+
+        $new = new Client();
+
+        $new->nom = $val['nom'];
+        $new->prenom = $val['prenom'];
+
+        $new->save();
+
+        return new RessourceClient($new);
     }
 
     /**

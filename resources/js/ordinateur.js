@@ -58,10 +58,6 @@ export default {
     methods: {
 
         initialize() {
-
-            console.log("ord dans init")
-            console.log(this.ord)
-
             this.attributions = []
 
             for (let i = 0; i < this.ord.attributions.length; i++) {

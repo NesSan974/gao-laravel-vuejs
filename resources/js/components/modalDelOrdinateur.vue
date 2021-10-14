@@ -1,12 +1,12 @@
 <template>
-  <v-row justify="center">
+  <v-row class="flex-row-reverse">
     <v-dialog v-model="dialog" persistent max-width="290">
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" icon>
-          <v-icon color="red">mdi-delete-alert</v-icon>
+          <v-icon color="error">mdi-delete-alert</v-icon>
         </v-btn>
       </template>
-      
+
       <v-card>
         <v-card-title class="headline"> Supprimer ? </v-card-title>
         <v-card-actions>

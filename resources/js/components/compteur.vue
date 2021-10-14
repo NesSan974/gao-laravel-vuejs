@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-row v-for="(horraire, key) in horraires" :key="key">
-      <v-col class="cols-md-1"> {{ key + 8 }}h </v-col>
+      <v-col class="col-md-2"> {{ key + 8 }}h </v-col>
 
       <v-row v-if="horraire.id">
-        <v-col class="cols-md-9">
+        <v-col class="col-md-9">
           {{ horraire.nom }} {{ horraire.prenom }}
         </v-col>
 
@@ -13,7 +13,7 @@
         </v-col>
       </v-row>
 
-      <v-col v-else class="cols-md-2">
+      <v-col v-else class="col-md-9">
         <modalAddAttribution
           :ord="ord"
           :horraire="horraire"

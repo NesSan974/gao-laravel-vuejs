@@ -67,6 +67,15 @@ export default {
             // this.dateUpdate
         },
 
+        deleteOrdinateur(ord){
+
+            var index = this.ordinateurs.indexOf(ord);
+            console.log(index);
+            this.ordinateurs.splice(index, 1);
+
+            this.$forceUpdate();
+        }
+
 
 
     } 

@@ -41,7 +41,7 @@
         sm="4"
         
         v-for="(ordinateur, key) in ordinateurs" :key="key">
-          <ordinateur v-bind:ord="ordinateur" :date="date" :clients="clients" />
+          <ordinateur @delOrd="deleteOrdinateur" v-bind:ord="ordinateur" :date="date" :clients="clients" />
 
         </v-col>
       </v-row>

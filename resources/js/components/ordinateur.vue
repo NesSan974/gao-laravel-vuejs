@@ -6,7 +6,7 @@
             <v-card-title>
                 <v-row>{{ ord.nom }}</v-row>
                 
-                <modalDelOrdinateur />
+                <modalDelOrdinateur @delOrd="deleteOrdinateur" :ord="ord" />
                 
             </v-card-title>
  

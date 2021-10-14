@@ -41,6 +41,14 @@ export default {
         }
     },
 
+    watch : {
+        ord: function (){
+
+            this.initialize()
+
+        }
+    },
+
     created() {
 
         this.initialize()
@@ -50,13 +58,11 @@ export default {
     methods: {
 
         initialize() {
-            // this.ord.attributions.forEach(attribution => {
-            //     this.attributions[attribution.horraire] = {
-            //         id: attribution.id,
-            //         nom: attribution.client.nom,
-            //         prenom: attribution.client.prenom
-            //     };
-            // })
+
+            console.log("ord dans init")
+            console.log(this.ord)
+
+            this.attributions = []
 
             for (let i = 0; i < this.ord.attributions.length; i++) {
                 this.attributions[this.ord.attributions[i].horraire] =
@@ -114,6 +120,11 @@ export default {
 
             this.displayHorraire()
 
+        },
+
+        deleteOrdinateur(ordi) {
+            this.$emit('delOrd', ordi)
+            
         }
 
     }

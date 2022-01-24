@@ -1,6 +1,8 @@
-# 
-Modifier .env.exemple en .env
-$ docker-compose up -d
+# installer 
+Modifier .env.exemple en .env 
+$ npm i && composer install  
+$ docker-compose up -d  
+
 
 
 ## About Laravel
